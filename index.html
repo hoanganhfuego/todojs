@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./tailwindcss/output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class=" flex flex-col items-center bg-[#ffe5ec] h-[100vh]">
+        <div class=" w-max h-fit mt-10 rounded-lg">
+            <div class="flex justify-between ">
+                <div class="border-2 border-black rounded-lg p-4 mr-6 w-1/2 flex justify-between items-center bg-[#ffb3c6]">
+                    <div>
+                        <div class="title mb-1 ">
+                            <label for="search">title: </label>
+                            <input type="text" class="outline-0 rounded-lg" id="search" placeholder="title">
+                        </div>
+                        <div class="date">
+                            <label for="date">date: </label>
+                            <input type="date" class="search-date outline-0 rounded-lg" placeholder="title"> --
+                            <input type="date" class="search-date outline-0 rounded-lg" placeholder="title">
+                        </div>
+                        <div id="status-search-field">
+                            <span>status: </span>
+                            <input type="radio" class="search-status" name="check-search" id="todo-search" value="todo">
+                            <label for="todo-search">todo</label>
+                            <input type="radio" class="search-status" name="check-search" id="inprogress-search" value="inprogress">
+                            <label for="inprogress-search">inprogress</label>
+                            <input type="radio" class="search-status" name="check-search" id="done-search" value="done">
+                            <label for="done-search">done</label>
+                        </div>
+                    </div>
+                    <i id='doSearch' class="fa-sharp fa-solid fa-magnifying-glass text-3xl hover:cursor-pointer "></i>
+                </div>
+                <div class="content border-2 border-black w-1/2 rounded-lg p-8 flex bg-[#ffb3c6]">
+                    <div id="input-field">
+                        <div class="mb-1">
+                            <label for="title">title: </label>
+                            <input type="text" id="title" class=" outline-0 rounded-lg" placeholder="title">
+                        </div>
+                        <div>
+                            <label for="deadline">deadline: </label>
+                            <input type="date" id="deadline" class=" outline-0 rounded-lg" placeholder="deadline">
+                        </div>
+                        <div id="status-field">
+                            <span>status: </span>
+                            <input type="radio" name="check" id="todo" value="todo">
+                            <label for="todo">todo</label>
+                            <input type="radio" name="check" id="inprogress" value="inprogress">
+                            <label for="inprogress">inprogress</label>
+                            <input type="radio" name="check" id="done" value="done">
+                            <label for="done">done</label>
+                        </div>
+                        <button id="submit" class=" border-2 border-black rounded w-28 bg-[white]">add</button>
+                        <button id="update" class=" border-2 border-black rounded w-28 bg-[white]">update</button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-2 border-black rounded p-4 mt-6 bg-[#ffb3c6]">
+                <div class="w-full flex items-center justify-between border-2 border-black rounded mt-1">
+                    <span class=" w-48 text-center ">number</span>
+                    <span class=" w-48 text-center ">title</span>
+                    <span class=" w-48 text-center ">deadline</span>
+                    <span class=" w-48 text-center ">status</span>
+                    <span class=" w-48 text-center ">update</span>
+                </div>
+                <div id="list" class=" overflow-scroll h-96">
+            </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="./js.js"></script>
+<script src="https://kit.fontawesome.com/cf17e2036e.js" crossorigin="anonymous"></script>
+</html>
